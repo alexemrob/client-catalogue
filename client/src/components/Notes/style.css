@@ -42,7 +42,6 @@ h1 {
 .todo-input {
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
-  border: 2px solid #5d0cff;
   outline: none;
   width: 320px;
   background: transparent;
@@ -68,6 +67,10 @@ h1 {
   background: rgb(12, 12, 71);
   color: white;
   text-transform: capitalize;
+}
+.todo-button:hover{
+  color: black;
+  background-color: gray;
 }
 
 .todo-input.edit {

@@ -12,8 +12,9 @@ function Charge() {
     return (
 <div>HELLO MONEY$$$
     <StripeCheckout 
-    stripeKey="pk_live_51Hu1bnCcafUqJjBLdNcJIFy9yHmzl4SV1VQ8Eup0XlDg1uo99QqLli7o517pKAoAW3q95pvS3zv9EGTSB7DtvNvY0038S1ZSJG"
+    stripeKey="pk_test_51Hu1bnCcafUqJjBLp94S62WTLFBAfR21RGQ9d2KTnetmd3pGtKjXxBKl7Iumdth0e4v515um5iR9tsrncIUMUaUD00ZtN9I6r2"
     token={handleToken}
+    amount={100 * 100}
     />
 </div>
     )

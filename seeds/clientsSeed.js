@@ -1,35 +1,32 @@
+let mongoose = require("mongoose");
+let db = require("../models");
 
-// This file empties clients collection and inserts the clientsSeeds into the collection
-const clientsController = require('../controllers/clientsController');
-const ObjectId = require('mongoose').Types.ObjectId;
+mongoose.connect("mongodb://localhost/clients", {
+  useNewUrlParser: true,
+  useFindAndModify: false
+});
 
-const clientsSeed = [
+let clientsSeed = [
     {
-        _id: new ObjectId('012345678901234567891000'),
-        idtwo: "C00001",
         info: {
             name: "Ali Rob",
             contact: {
-                phone: "(810)399-3882",
+                phone: "(810)399-3812",
                 email: "alexemrob@gmail.com",
             },
-            creditcard: {
-                number: 4242424242424242,
-                exp: "04/24",
-                cvc: 424,
-            },
             referBy: "Phuong Nguyen",
-            notes: "never bump her base - only use oribe",
+            notes: "oxidative color even w/ 10vol down bumps base - only use shadesEQ",
         }
-    }, {
-        toObject: {
-            virtuals: true
-        },
-        toJSON: {
-            virtuals: true
-        }
+    
     }]
 
-module.exports = clientsController.seed(clientsSeed)
-    .then((clients) => console.log(`Successfully added ${clients.name}`))
-    .catch((err) => console.log('Error running seeds'));
+    db.Clients.deleteMany({})
+    .then(() => db.Clients.collection.insertMany(clientsSeed))
+    .then(data => {
+      console.log(data.result.n + " records inserted!");
+      process.exit(0);
+    })
+    .catch(err => {
+      console.error(err);
+      process.exit(1);
+    });

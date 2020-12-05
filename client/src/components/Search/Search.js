@@ -1,10 +1,24 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
+import API from "../../utils/API";
 import "./style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 function Search() {
+ const [developerState,setDeveloperState] = useState({})
+
+    useEffect(() => {
+        API.getUsers().then(results => {
+            console.log(results)
+          setDeveloperState({
+            ...developerState,
+            users: results.data,
+            filteredUsers: results.data
+          });
+        });
+      }, []);
+
     return (
         <div class="search">
             <nav class="navbar justify-content-center">
@@ -13,7 +27,7 @@ function Search() {
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </nav>
-
+{JSON.stringify(developerState)}
             <div class="card" >
                 <div class="card-body">
                     <h5 class="card-title"><b>Corie Saffron</b></h5>
