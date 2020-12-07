@@ -1,9 +1,9 @@
 
 import React from 'react';
 import './App.css';
-import Wrapper from "./components/Wrapper"
+import Wrapper from "./components/Wrapper/Wrapper"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar"
+import NavBar from "./components/NavBar/NavBar"
 import Charge from "./components/Charge/Charge"
 import Message from "./components/Message/Message"
 import NewClient from "./components/NewClient/NewClient"
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <NavBar />
       <Wrapper>
         <Switch>
           <Route exact path="/" component={TodoList} />

@@ -9,24 +9,14 @@ const Schema = mongoose.Schema;
 /*SCHEMA*/
 // Create Schema for clients
 const ClientSchema = new Schema({
-    info: {
-        name: { type: String, required: true, trim: true, lowercase: true },
-        contact: {
-            phone: { type: String, required: true, trim: true },
-            email: { type: String, required: true, trim: true },
-        },
-        referBy: { type: String, required: false, trim: true },
-        notes: { type: String, required: false, trim: true },
-    }
-}, {
-    toObject: {
-        virtuals: true
-    },
-    toJSON: {
-        virtuals: true
-    }
-}
-);
+    _id: { type: String },
+    name: { type: String, required: true, trim: true },
+    phone: { type: String, required: true, trim: true },
+    email: { type: String, required: true, trim: true },
+    referBy: { type: String, required: false, trim: true },
+    notes: { type: String, required: false, trim: true },
+    insta: { type: String, required: false, trim: true }
+});
 
 // Create Virtuals for ClientSchema
 

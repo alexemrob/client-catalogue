@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
-function Navbar() {
+function NavBar() {
     return (
                 <ul className="nav d-flex justify-content-around">
                     <li className="nav-item"><a class="navBtn" href="/">NOTES TO SELF</a></li>
@@ -16,6 +16,6 @@ function Navbar() {
                 </ul>
     )
 }
-export default Navbar;
+export default NavBar;
 
 
