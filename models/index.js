@@ -1,5 +1,3 @@
-  
-module.exports = {
-    Clients: require('./clients.js'),
-
+  module.exports = {
+    Clients: require('./clients'),
   };

@@ -1,12 +1,7 @@
-/*DEPENDECIES*/
-//  MongoDB object modeling tool
 const mongoose = require("mongoose");
-
-/*INITIALIZATION*/
 // Create Schema class under Schema variable
 const Schema = mongoose.Schema;
 
-/*SCHEMA*/
 // Create Schema for clients
 const ClientSchema = new Schema({
     _id: { type: String },
@@ -18,8 +13,6 @@ const ClientSchema = new Schema({
     insta: { type: String, required: false, trim: true }
 });
 
-// Create Virtuals for ClientSchema
+const Clients = mongoose.model("Clients", ClientSchema);
 
-
-/*EXPORTS*/
-module.exports = mongoose.model("Clients", ClientSchema);
+module.exports = Clients;

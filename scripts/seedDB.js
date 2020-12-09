@@ -33,7 +33,8 @@ let clientsSeed = [
   }
 ]
 
-db.Clients.deleteMany({})
+db.Clients
+  .remove({})
   .then(() => db.Clients.collection.insertMany(clientsSeed))
   .then(data => {
     console.log(data.result.n + " records inserted!");

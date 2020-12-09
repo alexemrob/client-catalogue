@@ -1,31 +1,32 @@
+import React, { Component } from "react";
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import NavBar from "./components/NavBar";
+import Wrapper from "./components/Wrapper";
+import Checkout from "./components/Checkout";
+import NoMatch from "./pages/NoMatch";
+import Search from "./pages/Search";
+import Saved from "./pages/Saved";
 
-import React from 'react';
-import './App.css';
-import Wrapper from "./components/Wrapper/Wrapper"
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import NavBar from "./components/NavBar/NavBar"
-import Charge from "./components/Charge/Charge"
-import Message from "./components/Message/Message"
-import NewClient from "./components/NewClient/NewClient"
-import TodoList from "./components/Notes/TodoList"
-import Search from "./components/Search/Search"
+import "./App.css";
 
-function App() {
+class App extends Component {
 
-  return (
-    <Router>
-      <NavBar />
-      <Wrapper>
-        <Switch>
-          <Route exact path="/" component={TodoList} />
-          <Route exact path="/Search" component={Search} />
-          <Route exact path="/NewClient" component={NewClient} />
-          <Route exact path="/Charge" component={Charge} />
-          <Route exact path="/Message" component={Message} />
-        </Switch>
-      </Wrapper>
-    </Router>
-  );
-}
+  render() {
+    return (
+      <Router>
+        <div>
+          <NavBar />
+          <Checkout />
+          <Wrapper>
+            <Route exact path="/" component={Search} />
+            <Route exact path="/search" component={Search} />
+            <Route exact path="/saved" component={Saved} />
+            <Route exact path="/noMatch" component={NoMatch} />
+          </Wrapper>
+        </div>
+      </Router>
+    )
+  };
+};
 
 export default App;
