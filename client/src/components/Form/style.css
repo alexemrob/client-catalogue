@@ -1,18 +1,14 @@
-.container{
-    justify-content: flex;
-    flex-wrap: nowrap;
-}
 .search-bar{
     background-color: rgb(179, 200, 212);
-    margin-bottom: 20px;
-    margin-top: 50px;
+    /* margin-bottom: 20px; */
+    margin-top: 5px;
     width: 500px;
 }
 .btn-neon{
     position: relative;
     padding: 10px 30px;
     margin: 0 15px;
-    color: #89ff00;
+    color: lightblue;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -21,9 +17,8 @@
     overflow: hidden;
 }
 .btn-neon:hover{
-    background: #89ff00;
-    color: rgb(45, 45, 53);
-    box-shadow: 0 0 50px #89ff00;
+    color: lightblue;
+    box-shadow: 0 0 50px lightblue;
     transition-delay: 0.5s;
 }
 .btn-neon:before{
@@ -33,8 +28,8 @@
     left: 0;
     width: 10px;
     height: 10px;
-    border-top: 2px solid #89ff00;
-    border-left: 2px solid #89ff00;
+    border-top: 2px solid lightblue;
+    border-left: 2px solid lightblue;
     transition: 0.5s;
     transition-delay: 0.5s;
 }
@@ -45,8 +40,8 @@
     right: 0;
     width: 10px;
     height: 10px;
-    border-bottom: 2px solid #89ff00;
-    border-right: 2px solid #89ff00;
+    border-bottom: 2px solid lightblue;
+    border-right: 2px solid lightblue;
     transition: 0.5s;
     transition-delay: 0.5s;
 }
@@ -57,4 +52,8 @@
 .btn-neon:hover:after{
     width: 100%;
     height: 100%;
+}
+.form-group{
+    display: flex;
+    padding: 50px;
 }

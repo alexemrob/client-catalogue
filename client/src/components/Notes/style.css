@@ -5,9 +5,9 @@
 }
 
 .todo-app {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: start; */
   width: 520px;
   min-height: 600px;
   background: #161a2b;
@@ -64,12 +64,11 @@ h1 {
   text-transform: capitalize;
 }
 .todo-button:hover{
-  color: rgb(112, 112, 141);
-  background-color: rgb(179, 200, 212);
+  color: rgb(177, 248, 110);
 }
 
 .todo-input.edit {
-  border: 2px solid navy;
+  border: 2px solid lightskyblue;
 }
 
 .todo-button.edit {
@@ -78,8 +77,7 @@ h1 {
 }
 
 .todo-button.edit:hover{
-  color: rgb(112, 112, 141);
-  background-color: rgb(179, 200, 212);
+  color: rgb(177, 248, 110);
 }
 
 .todo-container {
@@ -95,7 +93,6 @@ h1 {
   margin: 4px auto;
   color: #fff;
   ;
-
   padding: 16px;
   border-radius: 5px;
   width: 90%;
