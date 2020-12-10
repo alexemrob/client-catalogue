@@ -30,6 +30,7 @@
     "react-stripe-checkout": "^2.6.3",
     "react-toastify": "^6.2.0",
     "stripe": "^8.127.0",
+    "twilio": "^3.54.0",
     "uuid": "^8.3.1"
   }
 }

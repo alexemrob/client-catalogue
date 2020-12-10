@@ -1,6 +1,9 @@
 import axios from "axios";
 
 export default {
+  getClients: function() {
+    return axios.get("/api/clients");
+  },
   getClient: function (query) {
     return axios.get(`/api/clients/${query}`);
   },

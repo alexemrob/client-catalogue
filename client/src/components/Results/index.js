@@ -33,9 +33,8 @@ class Results extends Component {
                 ) : (
                         <div>
                             {this.props.clients.map(result => (
-                                <div className="card mb-3" key={result._id}>
-                                    <div className="row">
-                                        <div className="col-md-10">
+                                <div className="box card" key={result._id}>
+                                    <div className="row glass">
                                             <div className="card-body">
                                                 <h5 className="card-title">{result.name}</h5>
                                                 <p>{result.phone} || {result.email}</p>
@@ -48,7 +47,6 @@ class Results extends Component {
                                                     </button>
                                                 </div>
                                             </div>
-                                        </div>
                                     </div>
                                 </div>
                             ))}

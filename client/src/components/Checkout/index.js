@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 toast.configure();
 
-function Charge() {
+function Checkout() {
     const [product] = React.useState({
         name: "Deposit",
         price: 100.00
@@ -41,4 +41,4 @@ function Charge() {
         />
     )
 }
-export default Charge;
+export default Checkout;

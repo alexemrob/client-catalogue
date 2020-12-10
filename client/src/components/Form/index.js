@@ -1,24 +1,24 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './style.css'
 
 function Form(props){
-return (
+  return (
   <div className="container">
   <form>
-    <div className="form-group">
-      <label htmlFor="search"><h2>Search</h2></label>
+    <div className="form-grop">
       <input
         onChange={props.handleInputChange}
         value={props.search}
         name="search"
         type="text"
-        className="form-control"
+        className="form-control search-bar"
         placeholder="Search for a Client"
         id="search"
       />
-      <button onClick={props.handleFormSubmit} className="btn btn-dark mt-3 mb-5">
+      <a onClick={props.handleFormSubmit} className="btn-neon">
         Search
-        </button>
+        </a>
     </div>
   </form>
   </div>

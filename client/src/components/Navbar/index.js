@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Checkout from "../Checkout";
 import "./style.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
@@ -8,8 +9,7 @@ function Navbar() {
 
 
         <nav className="navbar navbar-expand-lg text-light">
-            <div className="container">
-                <div className="navbar-brand">Client Catalogue</div>
+            <div className="container d-flex justify-content-center">
                 <ul className="navbar-nav">
                     <li className="nav-item">
                         <Link
@@ -25,15 +25,12 @@ function Navbar() {
                     </li>
                     <li className="nav-item">
                         <Link
-                            to="/search"
-                            className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-                        >Charge</Link>
+                            to="/AddClient"
+                            className={window.location.pathname === "/AddClient" ? "nav-link active" : "nav-link"}
+                        >New Client</Link>
                     </li>
                     <li className="nav-item">
-                        <Link
-                            to="/search"
-                            className={window.location.pathname === "/search" ? "nav-link active" : "nav-link"}
-                        >Add+</Link>
+                        <Checkout />
                     </li>
                 </ul>
             </div>

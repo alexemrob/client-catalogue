@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import Results from "../components/Results";
+import Todo from "../components/Notes/TodoList"
 import "../App.css"
 
 class Saved extends Component {
@@ -17,6 +18,7 @@ class Saved extends Component {
     render() {
         return (
             <div className="container">
+                            <Todo />
                 <h2>Today's clients</h2>
                 <Results clients={this.state.savedClients} />
             </div>
