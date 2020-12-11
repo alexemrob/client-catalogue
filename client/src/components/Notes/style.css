@@ -51,15 +51,12 @@ input[type=text] {
 }
 
 .button2{
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 4px auto;
   color: lightskyblue;
   ;
   padding: 16px;
   border-radius: 5px;
-  width: 90%;
 }
 
 .button2:hover{

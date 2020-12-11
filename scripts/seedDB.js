@@ -30,6 +30,30 @@ let clientsSeed = [
     referBy: "ali",
     notes: "notes about client go here",
     insta: "ig handle here"
+  },
+  {
+    name: "Jane Doe",
+    phone: "45345345-555-5555",
+    email: "janesemail@gmail.com",
+    referBy: "ali",
+    notes: "notes about client go here",
+    insta: "ig handle here"
+  },
+  {
+    name: "Jane Doe",
+    phone: "13454545-5555",
+    email: "janesemail@gmail.com",
+    referBy: "ali",
+    notes: "notes about client go here",
+    insta: "ig handle here"
+  },
+  {
+    name: "Jane Doe",
+    phone: "111435345455",
+    email: "janesemail@gmail.com",
+    referBy: "ali",
+    notes: "notes about client go here",
+    insta: "ig handle here"
   }
 ]
 

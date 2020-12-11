@@ -6,6 +6,7 @@ import NoMatch from "./pages/NoMatch";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
 import Footer from "./components/Footer";
+import NewClient from "./pages/NewClient";
 
 import "./App.css";
 
@@ -21,6 +22,7 @@ class App extends Component {
             <Route exact path="/search" component={Search} />
             <Route exact path="/saved" component={Saved} />
             <Route exact path="/noMatch" component={NoMatch} />
+            <Route exact path="/newclient" component={NewClient} />
           </Wrapper>
           <Footer />
         </div>

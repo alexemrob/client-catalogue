@@ -8,3 +8,34 @@ body{
 .container{
     font-family: 'Raleway', sans-serif;
 }
+.form-control{
+    margin-left: 20px;
+    width: 500px;
+    border-color: lightskyblue;
+    padding: 14px 32px 14px 16px;
+    border-radius: 4px 0 0 4px;
+    outline: none;
+    background: transparent;
+    color: lightblue;
+}
+form{
+    flex-wrap: wrap;
+}
+label{
+    font-family: 'Raleway', sans-serif;
+    padding: 14px;
+}
+.add-btns{
+    color: lightskyblue;
+    padding: 20px;
+    border-radius: 5px;
+    border: solid;
+    border-color: lightskyblue ;
+    border-width: thin;
+    padding-right: 80px;
+    padding-left: 80px;
+}
+.add-btns:hover{
+    color: whitesmoke;
+    background-color: grey;
+}

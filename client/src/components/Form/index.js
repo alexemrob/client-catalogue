@@ -6,7 +6,7 @@ function Form(props){
   return (
   <div className="container">
   <form>
-    <div className="form-group d-flex justify-content-center">
+    <div className="form-group1 d-flex justify-content-center">
       <input
         onChange={props.handleInputChange}
         value={props.search}

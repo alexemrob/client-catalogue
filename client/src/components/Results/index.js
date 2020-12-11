@@ -29,18 +29,21 @@ class Results extends Component {
         return (
             <div className="results-card d-flex justify-content-center">
                 {!this.props.clients.length ? (
-                    <h1 className="text-center">No Results to Display</h1>
+                    <h4 className="text-center">No Results to Display</h4>
                 ) : (
                         <div>
                             {this.props.clients.map(result => (
                                 <div className="box card mb-3" >
                                     <div className="row glass">
                                             <div className="card-body col-md-10">
-                                                <h5 className="card-title" key={result._id}>{result.name}</h5>
-                                                <p>{result.phone} || {result.email}</p>
+                                                <h3 className="card-title" key={result._id}>{result.name}</h3>
+                                                <p>{result.phone}</p>
+                                                <p> {result.email}</p>
                                                 <p>Referal: {result.referBy}</p>
                                                 <p className="card-text">Formula: {result.notes}</p>
                                                 <div className="d-flex justify-content-end">
+                                                <button className="btn btn-outline-dark mt-3 ml-3" >Edit
+                                                    </button>
                                                     <a href="www.instagram.com/{result.insta}" className="btn btn-outline-dark mt-3" target="_blank" >View IG</a>
                                                     <button onClick={() => this.handleSave(result)} className="btn btn-outline-dark mt-3 ml-3" >
                                                         {this.state.savedClients.map(client => client._id).includes(result._id) ? "X" : "+ Today"}
