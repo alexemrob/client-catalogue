@@ -26,8 +26,12 @@ class Search extends React.Component {
     }
 
     searchClient = query => {
+        console.log(query)
         API.getClient(query)
-            .then(res => this.setState({ clients: res.data.items.map(clientData => this.makeClient(clientData)) }))
+            .then(res =>{
+                console.log(res)
+                this.setState({ clients: res.data.map(clientData => this.makeClient(clientData)) })
+            }) 
             .catch(err => console.error(err));
     };
 

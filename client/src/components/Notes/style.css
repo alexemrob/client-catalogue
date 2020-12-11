@@ -1,38 +1,4 @@
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-.todo-app {
-  /* display: flex;
-  flex-direction: column;
-  justify-content: start; */
-  width: 520px;
-  min-height: 600px;
-  background: #161a2b;
-  text-align: center;
-  margin: 128px auto;
-  border-radius: 10px;
-  padding-bottom: 32px;
-}
-
-h1 {
-  margin: 32px 0;
-  color: #fff;
-  font-size: 24px;
-}
-
-.complete {
-  text-decoration: line-through;
-  opacity: 0.4;
-}
-
-.todo-form {
-  margin-bottom: 32px;
-}
-
-.todo-input {
+input[type=text] {
   border-color: lightskyblue;
   padding: 14px 32px 14px 16px;
   border-radius: 4px 0 0 4px;
@@ -42,19 +8,8 @@ h1 {
   color: lightblue;
 }
 
-.todo-input::placeholder {
-  color: rgb(112, 112, 141);
-  font-weight: bolder;
-}
-
-.edit::placeholder{
-  color: rgb(112, 112, 141);
-    font-weight: bolder;
-    background-color:  rgb(36, 36, 41);
-}
-
-.todo-button {
-  padding: 16px;
+.button {
+  padding: 14px;
   border-radius: 0 4px 4px 0;
   border-color: lightskyblue;
   cursor: pointer;
@@ -63,48 +18,51 @@ h1 {
   color: rgb(230, 230, 236);
   text-transform: capitalize;
 }
-.todo-button:hover{
-  color: rgb(177, 248, 110);
-}
-
-.todo-input.edit {
-  border: 2px solid lightskyblue;
-}
-
-.todo-button.edit {
+.button2 {
+  padding: 14px;
+  border-radius: 0 4px 4px 0;
+  border-color: lightskyblue;
+  cursor: pointer;
+  outline: none;
   background-color:  rgb(36, 36, 41);
-  padding: 16px 22px;
+  color: rgb(230, 230, 236);
+  text-transform: capitalize;
 }
 
-.todo-button.edit:hover{
+.button:hover{
   color: rgb(177, 248, 110);
 }
 
-.todo-container {
-  display: flex;
-  flex-direction: row;
-  position: relative;
+@media screen and (max-width:900px){
+
+    .main-contianer{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-evenly;       
+    }
+  
+  }
+
+.container1{
+  padding: 50px;
+  border-style: hidden;
+  text-align: center;
 }
 
-.todo-row {
+.button2{
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 4px auto;
-  color: #fff;
+  color: lightskyblue;
   ;
   padding: 16px;
   border-radius: 5px;
   width: 90%;
 }
 
-.icons {
-  display: flex;
-  align-items: center;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.delete-icon {
-  margin-right: 5px;
+.button2:hover{
+  color: white;
+  background-color: grey;
 }

@@ -1,11 +1,13 @@
 import axios from "axios";
 
 export default {
-  getClients: function() {
+  getClients: function () {
     return axios.get("/api/clients");
   },
   getClient: function (query) {
-    return axios.get(`/api/clients/${query}`);
+    if (query === "")
+      return;
+    return axios.get(`/api/clients?search=${query}`);
   },
   // Deletes the client with the given id
   deleteClient: function (id) {

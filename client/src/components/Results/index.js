@@ -33,10 +33,10 @@ class Results extends Component {
                 ) : (
                         <div>
                             {this.props.clients.map(result => (
-                                <div className="box card mb-3" key={result._id}>
+                                <div className="box card mb-3" >
                                     <div className="row glass">
                                             <div className="card-body col-md-10">
-                                                <h5 className="card-title">{result.name}</h5>
+                                                <h5 className="card-title" key={result._id}>{result.name}</h5>
                                                 <p>{result.phone} || {result.email}</p>
                                                 <p>Referal: {result.referBy}</p>
                                                 <p className="card-text">Formula: {result.notes}</p>

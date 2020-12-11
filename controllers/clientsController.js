@@ -3,9 +3,13 @@ const db = require("../models");
 // methods for clientsController
 module.exports = {
     findAll: function (req, res) {
+        // //console.log(req.query)
+        // const search = `/${req.query.search}/m`
+        // // const { query: params } = req;
+        // console.log(search)
+
         db.Clients
-            .find(req.query)
-            .sort({ date: -1 })
+            .find({ name: req.query.search })
             .then(dbModel => res.json(dbModel))
             .catch(err => {
                 console.error(err)
