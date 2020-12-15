@@ -14,14 +14,14 @@ export default {
     return axios.delete("/api/clients/" + id).then(result => result.data);
   },
   // Saves a client to the database
-  saveClient: function (clientData) {
+  saveClient : function (clientData) {
     return axios.post("/api/clients", clientData).then(result => result.data);
   },
   // Get the saved a clients from the database
   savedClients: function () {
     return axios.get("/api/clients").then(result => result.data);
   },
- updateToday: function (client) {
+  updateToday: function (client) {
     return axios.post("/api/today/" + client._id)
   }
 };

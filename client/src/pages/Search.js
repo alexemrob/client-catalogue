@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Component , useState } from "react";
 import Form from "../components/Search";
 import Results from "../components/Results";
 import API from "../utils/API";
+import { ItemAssignmentContext } from "twilio/lib/rest/numbers/v2/regulatoryCompliance/bundle/itemAssignment";
 
 class Search extends React.Component {
     state = {
@@ -60,6 +61,13 @@ class Search extends React.Component {
                     <h2>Results</h2>
                     <Results clients={this.state.clients} />
                 </div>
+{/* 
+                <div className="resultsDB">
+                    {
+                        items.map()
+                    }
+                </div> */}
+
             </div>
         )
     }

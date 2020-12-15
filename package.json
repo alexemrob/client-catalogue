@@ -28,6 +28,7 @@
     "mongoose": "^5.3.16",
     "node-sass": "^4.0.0",
     "react-dom": "^17.0.1",
+    "react-hook-form": "^6.13.0",
     "react-icons": "^4.1.0",
     "react-stripe-checkout": "^2.6.3",
     "react-toastify": "^6.2.0",
