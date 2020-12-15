@@ -62,4 +62,10 @@
 .form-group1{
     display: flex;
     padding: 50px;
+    background: transparent;
 }
+@media screen and (max-width:900px){
+    .btn-neon{
+display: none;
+    }
+  }

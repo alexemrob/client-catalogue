@@ -1,16 +1,13 @@
 const db = require("../models");
 
-// methods for clientsController
 module.exports = {
     findAll: function (req, res) {
-        // //console.log(req.query)
-        // const search = `/${req.query.search}/i`
-        // // const { query: params } = req;
-        // console.log(search)
-
         db.Clients
             .find({ name: req.query.search })
-            .then(dbModel => res.json(dbModel))
+            .then(dbModel => {
+                console.log(dbModel)
+                res.json(dbModel)
+            })
             .catch(err => {
                 console.error(err)
                 res.status(422).json(err)
@@ -18,7 +15,7 @@ module.exports = {
     },
     findById: function (req, res) {
         db.Clients
-            .findById(req.params.id)
+            .findById({ _id: req.params.id })
             .then(dbModel => res.json(dbModel))
             .catch(err => {
                 console.error(err)
@@ -52,5 +49,16 @@ module.exports = {
                 console.error(err)
                 res.status(422).json(err)
             });
+    },
+    updateToday: function (req, res) {
+        db.Clients
+            .findOneAndUpdate({ _id: req.params.id }, {
+                saved: true
+            })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => {
+                console.error(err)
+                res.status(422).json(err)
+            });
     }
-};
+}

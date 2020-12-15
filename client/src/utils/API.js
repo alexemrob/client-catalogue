@@ -20,5 +20,8 @@ export default {
   // Get the saved a clients from the database
   savedClients: function () {
     return axios.get("/api/clients").then(result => result.data);
+  },
+ updateToday: function (client) {
+    return axios.post("/api/today/" + client._id)
   }
 };

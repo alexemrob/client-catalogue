@@ -5,13 +5,14 @@
 }
 
 .card{
-    width: 500px;
+    width: 100%;
     border-color: lightskyblue;
     background-color:  rgb(36, 36, 41);
-    color: rgb(204, 204, 238);
+    color: whitesmoke;
     position: relative;
     padding: 20px;
     margin: 40px;
+    display: inline-block;
 }
 .btn{
     color: lightskyblue;
@@ -51,6 +52,7 @@
 }
 .btn-outline-dark{
     margin-left: 15px;
+    font-size: 20px;
 }
 h4{
     color: rgb(203, 250, 158);

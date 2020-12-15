@@ -8,7 +8,7 @@ toast.configure();
 
 function Checkout() {
     const [product] = React.useState({
-        name: "Deposit",
+        name: "Appointment Deposit",
         price: 100.00
     });
     async function handleToken(token) {
@@ -24,7 +24,6 @@ function Checkout() {
         } else {
             toast("Something went wrong", { type: "error" });
         }
-        console.log("fini")
        }catch(err){
          console.log("ERRORRR", err)
        }

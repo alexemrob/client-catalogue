@@ -1,5 +1,5 @@
 import React from "react";
-import Form from "../components/Form";
+import Form from "../components/Search";
 import Results from "../components/Results";
 import API from "../utils/API";
 
@@ -30,7 +30,7 @@ class Search extends React.Component {
         API.getClient(query)
             .then(res =>{
                 console.log(res)
-                this.setState({ clients: res.data.map(clientData => this.makeClient(clientData)) })
+                this.setState({ clients: res.data })
             }) 
             .catch(err => console.error(err));
     };

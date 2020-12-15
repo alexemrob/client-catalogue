@@ -18,6 +18,10 @@ body{
     background: transparent;
     color: lightblue;
 }
+.add-client{
+    background: transparent;
+}
+
 form{
     flex-wrap: wrap;
 }
@@ -32,10 +36,15 @@ label{
     border: solid;
     border-color: lightskyblue ;
     border-width: thin;
-    padding-right: 80px;
-    padding-left: 80px;
+    padding-right: 60px;
+    padding-left: 60px;
 }
 .add-btns:hover{
     color: whitesmoke;
     background-color: grey;
+}
+#exampleFormControlInput1{
+    width: 60vmin;
+    background: transparent;
+    color: lightskyblue
 }
