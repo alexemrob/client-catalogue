@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
+import { toast } from "react-toastify";
 import './style.css'
 
 function TodoList() {
@@ -17,18 +18,10 @@ function TodoList() {
     console.log(...todos);
   };
 
-  const updateTodo = (todoId, newValue) => {
-    if (!newValue.text || /^\s*$/.test(newValue.text)) {
-      return;
-    }
-
-    setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
-  };
-
   const removeTodo = id => {
     const removedArr = [...todos].filter(todo => todo.id !== id);
-
     setTodos(removedArr);
+    toast('FOURRR FOR U GLEN COCO U GO GLEN COCO <3', { type: "success" });
   };
 
   const completeTodo = id => {
@@ -41,6 +34,17 @@ function TodoList() {
     setTodos(updatedTodos);
   };
 
+  useEffect(() => {
+    const todos = JSON.parse(localStorage.getItem('todos'));
+    if (todos) {
+      setTodos(todos);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('todos', JSON.stringify(todos));
+  }, [todos]);
+
   return (
     <>
     <div className="post-its">
@@ -49,7 +53,6 @@ function TodoList() {
         todos={todos}
         completeTodo={completeTodo}
         removeTodo={removeTodo}
-        updateTodo={updateTodo}
       />
       </div>
     </>

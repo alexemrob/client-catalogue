@@ -1,39 +1,6 @@
 import React from "react";
 import { useForm } from 'react-hook-form';
-
-
-// function deleteClient(id) {
-//   API.deleteClient(id)
-//     .then(res => loadClients())
-//     .catch(err => console.log(err));
-// }
-
-// function handleFormSubmit(event) {
-//   event.preventDefault();
-//   if (formObject.name && formObject.phone) {
-//     API.saveClient({
-//       _id: formObject.id,
-//       name: formObject.name,
-//       phone: formObject.phone,
-//       email: formObject.email,
-//       referBy: formObject.referBy,
-//       notes: formObject.notes,
-//       insta: formObject.insta
-//     })
-//       .then(res => loadClients())
-//       .catch(err => console.log(err));
-//   }
-// };
-
-
-// function ClientForm({clients, onSubmit}) {
-//   const { register, handleSubmit } = useForm()
-//   const history = useHistory()
-
-//   const onSubmit = handleSubmit((data) => {
-//     alert(JSON.stringify(data));
-//     history.push("/")
-//   })
+import "./style.css"
 
 export const ClientForm = ({ client, onSubmit }) => {
     const { register, handleSubmit } = useForm({
@@ -45,7 +12,7 @@ export const ClientForm = ({ client, onSubmit }) => {
     });
 
   return (
-    <div className="add-client d-flex justify-content-center">
+    <div className="add-client d-flex justify-content-start">
         <form className="form-control" onSubmit={submitHandler}>
           <div className="form-group">
             <label htmlFor="text" >Name:</label>
@@ -71,8 +38,8 @@ export const ClientForm = ({ client, onSubmit }) => {
             <lable htmlFor="text">Formulas / Additional Notes:</lable>
             <textarea class="form-control" ref={register} type="text" name="notes" id="exampleFormControlInput1" rows="3"></textarea>
           </div>
-          <div className="form-group">
-            <button type="submit" className="btn btn-primary">Create Client</button>
+          <div className="bottom form-group d-flex justify-content-center">
+            <button type="submit" className="add-btn">Submit</button>
           </div>
         </form>
     </div>

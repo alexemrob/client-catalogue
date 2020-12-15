@@ -1,6 +1,5 @@
 import React, { Component, useEffect, useState} from "react";
 import API from "../../utils/API";
-// import '../Search/node_modules/bootstrap/dist/css/bootstrap.min.css';
 import './style.css'
 import { FaInstagram } from "react-icons/fa";
 
@@ -8,6 +7,7 @@ class Results extends Component {
     state = {
         savedClients: [],
     }
+
     componentDidMount() {
         API.savedClients()
             .then(savedClients => this.setState({ savedClients: savedClients }))
@@ -45,12 +45,11 @@ class Results extends Component {
                                                 <p>Referal: {result.referBy}</p>
                                                 <p className="card-text">Formula: {result.notes}</p>
                                                 <div className="d-flex justify-content-end">
-                                                {/* <button className="btn btn-outline-dark mt-3 ml-3" >Edit
-                                                    </button> */}
+                                                <button className="btn btn-outline-dark mt-3 ml-3" >Edit</button>
                                                     <button onClick={() => this.handleSave(result)} className="btn btn-outline-dark mt-3 ml-3" >
                                                         {result.saved ? "delete" : "save"}
                                                     </button>
-                                                    <a href="www.instagram.com/{result.insta}" className="btn btn-outline-dark mt-3" target="_blank" ><FaInstagram/></a>
+                                                    <a className="btn btn-outline-dark mt-3" target="_blank" href="www.instagram.com/" {...result.insta}><FaInstagram/></a>
                                                 </div>
                                             </div>
                                     </div>
