@@ -1,13 +1,14 @@
 import React from "react";
 import { ClientForm } from "../components/ClientForm";
-import {saveClient} from "../utils/API";
+import API from "../utils/API";
 import { useHistory } from "react-router-dom";
 
 export const NewClient = () => {
   const history = useHistory()
   
   const onSubmit = async (data) => {
-    await saveClient(data)
+    const clientData = await API.saveClient(data)
+    console.log(clientData.data);
     history.push("/")
   };
 

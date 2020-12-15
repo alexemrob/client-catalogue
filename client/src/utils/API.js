@@ -15,7 +15,7 @@ export default {
   },
   // Saves a client to the database
   saveClient : function (clientData) {
-    return axios.post("/api/clients", clientData).then(result => result.data);
+    return axios.post("/api/clients", clientData);
   },
   // Get the saved a clients from the database
   savedClients: function () {
