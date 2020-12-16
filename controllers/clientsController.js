@@ -2,8 +2,9 @@ const db = require("../models");
 
 module.exports = {
     findAll: function (req, res) {
+        var myVar = req.query.search;
         db.Clients
-            .find({ name: req.query.search })
+           .find({ name: { $regex: myVar, $options: 'i' } })
             .then(dbModel => {
                 console.log(dbModel)
                 res.json(dbModel)
