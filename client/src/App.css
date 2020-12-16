@@ -21,13 +21,8 @@ body{
 .add-client{
     background: transparent;
 }
-
-form{
-    flex-wrap: wrap;
-}
 label{
     font-family: 'Raleway', sans-serif;
-    padding: 14px;
 }
 .add-btns{
     color: lightskyblue;
@@ -46,5 +41,19 @@ label{
 #exampleFormControlInput1{
     width: 60vmin;
     background: transparent;
-    color: lightskyblue
+    color: lightskyblue;
+}
+.form3{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.form-control2{
+    width: 500px;
+    border: solid;
+    border-radius: 4px;
+    border-width: thin;
+    border-color: lightskyblue;
+    display: flex;
+    justify-content: end;
 }

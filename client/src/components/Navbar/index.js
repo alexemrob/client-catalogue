@@ -29,6 +29,12 @@ function Navbar() {
                             className={window.location.pathname === "/newclient" ? "nav-link active" : "nav-link"}
                         >New Client</Link>
                     </li>
+                    {/* <li className="nav-item">
+                        <Link
+                            to="/message"
+                            className={window.location.pathname === "/message" ? "nav-link active" : "nav-link"}
+                        >Message</Link>
+                    </li> */}
                     <li className="nav-item">
                         <Checkout />
                     </li>

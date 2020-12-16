@@ -1,8 +1,8 @@
-import React, { Component , useState } from "react";
+import React, { useState, useEffect } from "react";
 import Form from "../components/Search";
 import Results from "../components/Results";
+// import Clientelle from "../components/Clientelle";
 import API from "../utils/API";
-import { ItemAssignmentContext } from "twilio/lib/rest/numbers/v2/regulatoryCompliance/bundle/itemAssignment";
 
 class Search extends React.Component {
     state = {
@@ -14,17 +14,17 @@ class Search extends React.Component {
         this.searchClient();
     }
 
-    makeClient = clientData => {
-        return {
-            _id: clientData.id,
-            name: clientData.name,
-            phone: clientData.phone,
-            email: clientData.email,
-            referBy: clientData.referBy,
-            notes: clientData.notes,
-            insta: clientData.insta
-        }
-    }
+    // makeClient = clientData => {
+    //     return {
+    //         _id: clientData.id,
+    //         name: clientData.name,
+    //         phone: clientData.phone,
+    //         email: clientData.email,
+    //         referBy: clientData.referBy,
+    //         notes: clientData.notes,
+    //         insta: clientData.insta
+    //     }
+    // }
 
     searchClient = query => {
         console.log(query)
@@ -58,16 +58,9 @@ class Search extends React.Component {
                     handleFormSubmit={this.handleFormSubmit}
                 />
                 <div className="container">
-                    <h2>Results</h2>
                     <Results clients={this.state.clients} />
+                    {/* <Clientelle /> */}
                 </div>
-{/* 
-                <div className="resultsDB">
-                    {
-                        items.map()
-                    }
-                </div> */}
-
             </div>
         )
     }

@@ -11,7 +11,7 @@ export default {
   },
   // Deletes the client with the given id
   deleteClient: function (id) {
-    return axios.delete("/api/clients/" + id).then(result => result.data);
+    return axios.delete("/api/clients/delete/" + id).then(result => result.data);
   },
   // Saves a client to the database
   saveClient : function (clientData) {
@@ -21,7 +21,10 @@ export default {
   savedClients: function () {
     return axios.get("/api/clients").then(result => result.data);
   },
-  updateToday: function (client) {
-    return axios.post("/api/today/" + client._id)
+  updateClient: function (id) {
+    return axios.post(`/api/clients/${id}/`)
+  },
+  findClient: function (id) {
+    return axios.get("/api/clients/" + id)
   }
 };

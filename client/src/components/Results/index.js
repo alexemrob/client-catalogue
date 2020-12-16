@@ -1,5 +1,7 @@
-import React, { Component, useEffect, useState} from "react";
+import React, { Component } from "react";
 import API from "../../utils/API";
+import { Link } from 'react-router-dom'
+// import DeleteBtn from "./components/DeleteBtn";
 import './style.css'
 import { FaInstagram } from "react-icons/fa";
 
@@ -28,6 +30,8 @@ class Results extends Component {
                 .catch(err => console.error(err));
         }
     }
+
+
     render() {
         return (
             <div className="results-card d-flex justify-content-start">
@@ -45,11 +49,12 @@ class Results extends Component {
                                                 <p>Referal: {result.referBy}</p>
                                                 <p className="card-text">Formula: {result.notes}</p>
                                                 <div className="d-flex justify-content-end">
-                                                <button className="btn btn-outline-dark mt-3 ml-3" >Edit</button>
+                                                {/* <DeleteBtn onClick={() => deleteBook(result._id)} /> */}
+                                                <Link to={`/edit/${result._id}`}>Edit</Link>
                                                     <button onClick={() => this.handleSave(result)} className="btn btn-outline-dark mt-3 ml-3" >
                                                         {result.saved ? "delete" : "save"}
                                                     </button>
-                                                    <a className="btn btn-outline-dark mt-3" target="_blank" href="www.instagram.com/" {...result.insta}><FaInstagram/></a>
+                                                    <a className="btn btn-outline-dark mt-3"  href="www.instagram.com/"{...result.insta}><FaInstagram/></a>
                                                 </div>
                                             </div>
                                     </div>
