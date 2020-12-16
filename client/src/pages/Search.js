@@ -14,18 +14,6 @@ class Search extends React.Component {
         this.searchClient();
     }
 
-    // makeClient = clientData => {
-    //     return {
-    //         _id: clientData.id,
-    //         name: clientData.name,
-    //         phone: clientData.phone,
-    //         email: clientData.email,
-    //         referBy: clientData.referBy,
-    //         notes: clientData.notes,
-    //         insta: clientData.insta
-    //     }
-    // }
-
     searchClient = query => {
         console.log(query)
         API.getClient(query)
