@@ -22,7 +22,9 @@ router
  router
   .route("/:id")
   .get(clientsController.findById)
+  .post(clientsController.updateEdit)
   .put(clientsController.update)
   .delete(clientsController.remove)
+
 
 module.exports = router;

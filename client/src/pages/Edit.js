@@ -17,7 +17,7 @@ export const Edit = () => {
   }, []);
 
   const onSubmit = async (data) => {
-    await API.updateClient(data, match.params.id)
+    await API.updateEdit(data, match.params.id)
     history.push("/")
   }
 

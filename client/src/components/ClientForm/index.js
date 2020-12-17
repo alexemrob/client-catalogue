@@ -6,7 +6,6 @@ export const ClientForm = ({ client, onSubmit }) => {
     const { register, handleSubmit } = useForm({
       defaultValues: {...client},
     });
-  console.log(client)
     const submitHandler = handleSubmit((data) => {
       onSubmit(data)
     });

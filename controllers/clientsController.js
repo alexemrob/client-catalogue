@@ -23,6 +23,15 @@ module.exports = {
                 res.status(422).json(err)
             });
     },
+    updateEdit: function (req, res) {
+        db.Clients
+            .findById({ _id: req.params.id })
+            .then(dbModel => res.json(dbModel))
+            .catch(err => {
+                console.error(err)
+                res.status(422).json(err)
+            });
+    },
     create: function (req, res) {
         db.Clients
             .create(req.body)

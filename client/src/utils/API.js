@@ -24,7 +24,6 @@ export default {
   },
   // Saves an existing client to SAVED
   addClient : function (clientData) {
-    console.log(clientData)
     return axios.post("/api/clients/saved/" + clientData._id);
   },
   // Get the SAVED clients from the database
@@ -36,8 +35,8 @@ export default {
 
 
   //edit
-  updateClient: function (id) {
-    return axios.post(`/api/clients/${id}/`)
+  updateEdit: function (id) {
+    return axios.post("/api/clients/" + id)
   },
   //edit
   findClient: function (id) {
