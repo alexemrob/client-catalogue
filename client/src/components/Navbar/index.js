@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Checkout from "../Checkout";
 import "./style.css";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import { FaInstagram } from "react-icons/fa";
 
 function Navbar() {
     return (
@@ -29,14 +29,17 @@ function Navbar() {
                             className={window.location.pathname === "/newclient" ? "nav-link active" : "nav-link"}
                         >New Client</Link>
                     </li>
-                    {/* <li className="nav-item">
+                    <li className="nav-item">
                         <Link
                             to="/message"
                             className={window.location.pathname === "/message" ? "nav-link active" : "nav-link"}
                         >Message</Link>
-                    </li> */}
+                    </li>
                     <li className="nav-item">
                         <Checkout />
+                    </li>
+                    <li className="nav-item">
+                    <a target="_blank" href="https://instagram.com/ali_atthesalon"><FaInstagram/></a>
                     </li>
                 </ul>
             </div>

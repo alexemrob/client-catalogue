@@ -7,17 +7,22 @@ router.route("/")
   .post(clientsController.create)
   .put(clientsController.update);
 
-// Matches "/api/clients/:id"
 router
+  .route("/delete/:id")
+  .delete(clientsController.unsave)
+
+router
+  .route("/saved/:id")
+  .post(clientsController.add)
+
+router
+ .route("/saved2")
+ .get(clientsController.getsaved)
+
+ router
   .route("/:id")
   .get(clientsController.findById)
   .put(clientsController.update)
   .delete(clientsController.remove)
-  .post(clientsController.updateToday);
-
-//Matches "api/clients/today"
-router
-  .route("/today")
-  .get(clientsController.findAll)
 
 module.exports = router;

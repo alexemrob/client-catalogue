@@ -25,8 +25,14 @@ class Results extends Component {
                 .catch(err => console.error(err));
         } else {
             console.log(client)
-            API.updateToday(client)
-                .then(savedClient => this.setState({ savedClients: this.state.savedClients.concat([savedClient]) }))
+            API.addClient(client)
+                .then(savedClient => {
+                    let currentClient = this.state.savedClients[0]
+                    this.setState({ savedClients: [{...currentClient, saved: false}] })
+                    // API.savedClients()
+                    // .then(savedClients => this.setState({ savedClients: savedClients }))
+                    // .catch(err => console.error(err));
+                })
                 .catch(err => console.error(err));
         }
     }
@@ -44,17 +50,17 @@ class Results extends Component {
                                     <div className="row glass">
                                             <div className="card-body col-md-10">
                                                 <h2 className="card-title" key={result._id}>{result.name}</h2>
-                                                <p>{result.phone}</p>
-                                                <p> {result.email}</p>
-                                                <p>Referal: {result.referBy}</p>
-                                                <p className="card-text">Formula: {result.notes}</p>
+                                                <p><b>Phone Number:</b> {result.phone}</p>
+                                                <p><b>Email Address: </b>{result.email}</p>
+                                                <p><b>Referal: </b>{result.referBy}</p>
+                                                <p className="card-text"><b>Formula + Notes: </b>{result.notes}</p>
                                                 <div className="d-flex justify-content-end">
-                                                {/* <DeleteBtn onClick={() => deleteBook(result._id)} /> */}
-                                                <Link to={`/edit/${result._id}`}>Edit</Link>
+                                                <Link className="btn btn-outline-dark mt-3" to={`/edit/${result._id}`}>Edit</Link>
                                                     <button onClick={() => this.handleSave(result)} className="btn btn-outline-dark mt-3 ml-3" >
-                                                        {result.saved ? "delete" : "save"}
+                                                        {result.saved ? "Remove" : "+ Today"}
                                                     </button>
-                                                    <a className="btn btn-outline-dark mt-3"  href="www.instagram.com/"{...result.insta}><FaInstagram/></a>
+                                                    <a className="btn btn-outline-dark mt-3"  href={`www.instagram.com/${result.insta}`}><FaInstagram/></a>
+                                                    {/* <a target="_blank" href="https://instagram.com/"{...result.insta}><FaInstagram/></a> */}
                                                 </div>
                                             </div>
                                     </div>

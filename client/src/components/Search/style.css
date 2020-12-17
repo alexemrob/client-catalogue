@@ -66,6 +66,15 @@
 }
 @media screen and (max-width:900px){
     .btn-neon{
-display: none;
+        padding: 10px;
+        margin: 5px;
+        color: lightblue;
+        font-size: 15px;
+        text-transform: lowercase;
+        letter-spacing: 0px;
+    }
+    #search{
+        width: 140px;
+        padding: 0px;
     }
   }
