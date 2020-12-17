@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import API from "../../utils/API";
 import { Link } from 'react-router-dom'
-// import DeleteBtn from "./components/DeleteBtn";
 import './style.css'
 import { FaInstagram } from "react-icons/fa";
 
@@ -18,21 +17,13 @@ class Results extends Component {
 
     handleSave = client => {
 
-        if (client.saved) {
-            console.log(client)
+        if (this.state.savedClients.map(client => client._id).includes(client._id)) {
             API.deleteClient(client._id)
                 .then(deletedClient => this.setState({ savedClients: this.state.savedClients.filter(client => client._id !== deletedClient._id) }))
                 .catch(err => console.error(err));
         } else {
-            console.log(client)
             API.addClient(client)
-                .then(savedClient => {
-                    let currentClient = this.state.savedClients[0]
-                    this.setState({ savedClients: [{...currentClient, saved: false}] })
-                    // API.savedClients()
-                    // .then(savedClients => this.setState({ savedClients: savedClients }))
-                    // .catch(err => console.error(err));
-                })
+            .then(savedClient => this.setState({ savedClients: this.state.savedClients.concat([savedClient]) }))
                 .catch(err => console.error(err));
         }
     }
@@ -57,10 +48,9 @@ class Results extends Component {
                                                 <div className="d-flex justify-content-end">
                                                 <Link className="btn btn-outline-dark mt-3" to={`/edit/${result._id}`}>Edit</Link>
                                                     <button onClick={() => this.handleSave(result)} className="btn btn-outline-dark mt-3 ml-3" >
-                                                        {result.saved ? "Remove" : "+ Today"}
+                                                    {this.state.savedClients.map(client => client._id).includes(result._id) ? "Remove" : "+ Today"}
                                                     </button>
                                                     <a className="btn btn-outline-dark mt-3"  href={`www.instagram.com/${result.insta}`}><FaInstagram/></a>
-                                                    {/* <a target="_blank" href="https://instagram.com/"{...result.insta}><FaInstagram/></a> */}
                                                 </div>
                                             </div>
                                     </div>
