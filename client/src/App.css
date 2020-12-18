@@ -57,3 +57,11 @@ label{
     display: flex;
     justify-content: end;
 }
+h3{
+    font-family:  'Raleway', sans-serif;
+}
+.messages{
+    flex-flow: column;
+    display: flex;
+    justify-content: center;
+}

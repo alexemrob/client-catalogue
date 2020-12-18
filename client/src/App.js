@@ -8,6 +8,7 @@ import Saved from "./pages/Saved";
 import Footer from "./components/Footer";
 import NewClient from "./pages/NewClient";
 import Edit from "./pages/Edit";
+import Message from "./pages/Message";
 
 import "./App.css";
 
@@ -25,6 +26,7 @@ class App extends Component {
             <Route exact path="/noMatch" component={NoMatch} />
             <Route exact path="/newclient" component={NewClient} />
             <Route exact path="/edit/:id" component={Edit} />
+            <Route exact path="/message" component={Message} />
           </Wrapper>
           <Footer />
         </div>
