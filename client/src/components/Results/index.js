@@ -47,9 +47,9 @@ class Results extends Component {
                                             <div className="d-flex justify-content-end">
                                                 <Link className="btn btn-outline-dark mt-3" to={`/edit/${result._id}`}>Edit</Link>
                                                 <button onClick={() => this.handleSave(result)} className="btn btn-outline-dark mt-3 ml-3" >
-                                                    {this.state.savedClients.map(client => client._id).includes(result._id) ? "Remove" : "+ Today"}
+                                                    {this.state.savedClients.map(client => client._id).includes(result._id) ? "- Today" : "+ Today"}
                                                 </button>
-                                                <a className="btn btn-outline-dark mt-3" href={`www.instagram.com/${result.insta}`}><FaInstagram /></a>
+                                                <a className="btn btn-outline-dark mt-3" target="_blank" href={`www.instagram.com/${result.insta}`}><FaInstagram /></a>
                                             </div>
                                         </div>
                                     </div>

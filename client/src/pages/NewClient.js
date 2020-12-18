@@ -11,7 +11,6 @@ export const NewClient = () => {
     const clientData = await API.saveClient(data)
     console.log(clientData.data);
     toast(`${data.name} was successfully added!`, { type: "success" });
-
     history.push("/")
   };
 

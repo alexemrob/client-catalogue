@@ -24,8 +24,9 @@ module.exports = {
             });
     },
     updateEdit: function (req, res) {
+        console.log(req.params.id)
         db.Clients
-            .findById({ _id: req.params.id })
+            .findOneAndUpdate({ _id: req.params.id }, req.body)
             .then(dbModel => res.json(dbModel))
             .catch(err => {
                 console.error(err)

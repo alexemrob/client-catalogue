@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TodoForm from './TodoForm';
 import Todo from './Todo';
-import { toast } from "react-toastify";
 import './style.css'
 
 function TodoList() {
@@ -21,7 +20,6 @@ function TodoList() {
   const removeTodo = id => {
     const removedArr = [...todos].filter(todo => todo.id !== id);
     setTodos(removedArr);
-    toast('FOURRR FOR U GLEN COCO U GO GLEN COCO <3', { type: "success" });
   };
 
   const completeTodo = id => {

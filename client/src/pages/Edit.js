@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import { useRouteMatch, useHistory } from "react-router-dom";
 import { ClientForm } from "../components/ClientForm";
+import { toast } from "react-toastify";
 
 export const Edit = () => {
   const match = useRouteMatch()
@@ -18,6 +19,7 @@ export const Edit = () => {
 
   const onSubmit = async (data) => {
     await API.updateEdit(data, match.params.id)
+    toast(`${data.name}'s information was successfully updated!`, { type: "success" });
     history.push("/")
   }
 
