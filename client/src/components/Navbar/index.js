@@ -4,7 +4,7 @@ import Checkout from "../Checkout";
 import "./style.css";
 import { FaInstagram } from "react-icons/fa";
 
-function Navbar() {
+function NavBar() {
     return (
 
 
@@ -48,4 +48,4 @@ function Navbar() {
     );
 }
 
-export default Navbar;
+export default NavBar;
