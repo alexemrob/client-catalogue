@@ -7,7 +7,6 @@ import "react-toastify/dist/ReactToastify.css";
 toast.configure();
 
 function Checkout() {
-    const APIKEY= process.env.STRIPE_KEY
     const [product] = React.useState({
         name: "Appointment Deposit",
         price: 100.00
