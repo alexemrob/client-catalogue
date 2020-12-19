@@ -22,13 +22,21 @@ app.use(routes);
 // Connect to db
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/clients";
 mongoose.connect(MONGODB_URI || 'mongodb://localhost/clients',
+
 {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false
 }
-);
+)
+.then(()=>{
+  console.log("successfully connected")
+})
+.catch((e)=>{
+  console.log(e)
+})
+
 
 
 // Start the API server
