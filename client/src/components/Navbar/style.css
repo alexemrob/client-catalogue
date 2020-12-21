@@ -18,8 +18,9 @@ a{
     margin-right: 40px;
 }
 .nav-link:hover{
-    color: rgb(203, 248, 161);
+    /* color: rgb(203, 248, 161); */
+    color: #bcf5bc ;
 }
 .nav-link{
-    color: pink;
+    color: rgb(248, 203, 210);
 }

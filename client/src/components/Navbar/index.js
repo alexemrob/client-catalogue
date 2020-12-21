@@ -38,9 +38,6 @@ function NavBar() {
                     <li className="nav-item">
                         <Checkout />
                     </li>
-                    <li className="nav-item">
-                    <a target="_blank" href="https://instagram.com/ali_atthesalon"><FaInstagram/></a>
-                    </li>
                 </ul>
             </div>
         </nav>

@@ -3,7 +3,7 @@
 
 body{
     background-color: rgb(45, 45, 53);
-    color: rgb(234, 250, 141);
+    color: rgb(236, 248, 169);
 }
 .container{
     font-family: 'Raleway', sans-serif;
@@ -64,4 +64,7 @@ h3{
     flex-flow: column;
     display: flex;
     justify-content: center;
+}
+.texting{
+    padding: 40px;
 }
