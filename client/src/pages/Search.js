@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Form from "../components/Search";
 import Results from "../components/Results";
-// import Clientelle from "../components/Clientelle";
 import API from "../utils/API";
 
 class Search extends React.Component {
@@ -47,7 +46,6 @@ class Search extends React.Component {
                 />
                 <div className="container">
                     <Results clients={this.state.clients} />
-                    {/* <Clientelle /> */}
                 </div>
             </div>
         )
