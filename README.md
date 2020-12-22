@@ -9,7 +9,7 @@ Client-Catalogue provides a virtual organization for businesses. You may add, up
 Start by navigating to "New Client" to build your personalized clientelle and keep track of your work day. Search, charge and update client info as needed.
 <br><br>
 
-<img src="./public/ccSS.png" alt="screen-shot">
+<img src="./client/public/ccSS.png" alt="screen-shot">
 <br>
 
 ## Key points in building this application:
